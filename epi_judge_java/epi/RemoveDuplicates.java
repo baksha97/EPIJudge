@@ -7,7 +7,12 @@ import epi.test_framework.GenericTest;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.function.BiPredicate;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class RemoveDuplicates {
   @EpiUserType(ctorParams = {String.class, String.class})
   //@include
@@ -47,8 +52,17 @@ public class RemoveDuplicates {
     }
   }
   public static void eliminateDuplicate(List<Name> names) {
-    // TODO - you fill in here.
-    return;
+    Collections.sort(names);
+    int end = names.size() - 1;
+    int i = 0;
+    while(i < names.size() - 1) {
+      Name toCheck = names.get(i);
+      if (names.get(++i).equals(toCheck))
+        while (names.get(++i).equals(toCheck)) Collections.swap(names, i, end--);
+      else i++;
+    }
+
+    while(i < names.size()) names.remove(--i);
   }
   @EpiTest(testDataFile = "remove_duplicates.tsv")
   public static List<Name> eliminateDuplicateWrapper(List<Name> names) {

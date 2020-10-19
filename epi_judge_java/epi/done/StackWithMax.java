@@ -1,29 +1,42 @@
-package epi;
+package epi.done;
 import epi.test_framework.EpiTest;
 import epi.test_framework.EpiUserType;
 import epi.test_framework.GenericTest;
 import epi.test_framework.TestFailure;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Stack;
+import java.util.stream.Collectors;
+
 public class StackWithMax {
 
   public static class Stack {
+
+    java.util.Stack<Integer> stack = new java.util.Stack<>();
+    java.util.Stack<Integer> maxStack = new java.util.Stack<>();
+
     public boolean empty() {
-      // TODO - you fill in here.
-      return true;
+      return stack.isEmpty();
     }
+
     public Integer max() {
-      // TODO - you fill in here.
-      return 0;
+      return maxStack.peek();
     }
     public Integer pop() {
-      // TODO - you fill in here.
-      return 0;
+      if (stack.peek().equals(maxStack.peek())) maxStack.pop();
+
+      return stack.pop();
     }
     public void push(Integer x) {
-      // TODO - you fill in here.
-      return;
+      stack.push(x);
+      if(maxStack.isEmpty() || maxStack.peek() <= x) maxStack.add(x);
+    }
+
+    //my own debugging purposes
+    public boolean contains(Integer x){
+      return new HashSet<>(stack).contains(x);
     }
   }
   @EpiUserType(ctorParams = {String.class, int.class})
@@ -60,6 +73,7 @@ public class StackWithMax {
         case "max":
           result = s.max();
           if (result != op.arg) {
+            System.out.println("\n\n\n" + s.contains(op.arg));
             throw new TestFailure("Max: expected " + String.valueOf(op.arg) +
                                   ", got " + String.valueOf(result));
           }

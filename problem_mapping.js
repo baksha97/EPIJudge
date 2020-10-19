@@ -878,7 +878,7 @@ problem_mapping = {
                 "total": 101
             },
             "Java: StackWithMax.java": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Python: stack_with_max.py": {
@@ -948,7 +948,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Java: TreeLevelOrder.java": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             },
             "Python: tree_level_order.py": {
@@ -1076,7 +1076,7 @@ problem_mapping = {
                 "total": 7690
             },
             "Java: PathSum.java": {
-                "passed": 0,
+                "passed": 7690,
                 "total": 7690
             },
             "Python: path_sum.py": {
@@ -1402,7 +1402,7 @@ problem_mapping = {
                 "total": 503
             },
             "Java: KthLargestInArray.java": {
-                "passed": 0,
+                "passed": 503,
                 "total": 503
             },
             "Python: kth_largest_in_array.py": {
@@ -2130,7 +2130,7 @@ problem_mapping = {
                 "total": 1001
             },
             "Java: Fibonacci.java": {
-                "passed": 0,
+                "passed": 46,
                 "total": 46
             },
             "Java: MaxSumSubarray.java": {
@@ -2800,7 +2800,7 @@ problem_mapping = {
                 "total": 102
             },
             "Java: ElementAppearingOnce.java": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             },
             "Python: element_appearing_once.py": {
