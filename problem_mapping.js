@@ -1800,7 +1800,7 @@ problem_mapping = {
                 "total": 3139
             },
             "Java: IsTreeABst.java": {
-                "passed": 0,
+                "passed": 3139,
                 "total": 3139
             },
             "Python: is_tree_a_bst.py": {
@@ -1984,7 +1984,7 @@ problem_mapping = {
                 "total": 102
             },
             "Java: PhoneNumberMnemonic.java": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             },
             "Python: phone_number_mnemonic.py": {
@@ -2054,7 +2054,7 @@ problem_mapping = {
                 "total": 11
             },
             "Java: EnumerateBalancedParentheses.java": {
-                "passed": 0,
+                "passed": 4,
                 "total": 11
             },
             "Python: enumerate_balanced_parentheses.py": {

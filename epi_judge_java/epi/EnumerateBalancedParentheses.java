@@ -3,16 +3,31 @@ import epi.test_framework.EpiTest;
 import epi.test_framework.EpiTestComparator;
 import epi.test_framework.GenericTest;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.function.BiPredicate;
 public class EnumerateBalancedParentheses {
   @EpiTest(testDataFile = "enumerate_balanced_parentheses.tsv")
 
   public static List<String> generateBalancedParentheses(int numPairs) {
-    // TODO - you fill in here.
-    return null;
+    List<String> result = new ArrayList<>();
+    result.add("");
+    for (int i = 0; i < numPairs; i++) {
+      result = addAnAdditionalPair(result);
+    }
+    return result;
   }
+
+  private static List<String> addAnAdditionalPair(List<String> pairs) {
+    Set<String> result = new HashSet<>();
+    for (String pair : pairs) {
+      result.add("()" + pair);
+      result.add(pair + "()");
+      result.add("(" + pair + ")");
+    }
+
+    return new ArrayList<>(result);
+  }
+
   @EpiTestComparator
   public static boolean comp(List<String> expected, List<String> result) {
     if (result == null) {
