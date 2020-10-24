@@ -1,17 +1,17 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
-public class IsNumberPalindromic {
-  @EpiTest(testDataFile = "is_number_palindromic.tsv")
-  public static boolean isPalindromeNumber(int x) {
+public class ReverseBits {
+  @EpiTest(testDataFile = "reverse_bits.tsv")
+  public static long reverseBits(long x) {
     // TODO - you fill in here.
-    return true;
+    return 0;
   }
 
   public static void main(String[] args) {
     System.exit(
         GenericTest
-            .runFromAnnotations(args, "IsNumberPalindromic.java",
+            .runFromAnnotations(args, "ReverseBits.java",
                                 new Object() {}.getClass().getEnclosingClass())
             .ordinal());
   }

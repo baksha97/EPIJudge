@@ -1,9 +1,9 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
-public class ClosestIntSameWeight {
-  @EpiTest(testDataFile = "closest_int_same_weight.tsv")
-  public static long closestIntSameBitCount(long x) {
+public class ReverseDigits {
+  @EpiTest(testDataFile = "reverse_digits.tsv")
+  public static long reverse(int x) {
     // TODO - you fill in here.
     return 0;
   }
@@ -11,7 +11,7 @@ public class ClosestIntSameWeight {
   public static void main(String[] args) {
     System.exit(
         GenericTest
-            .runFromAnnotations(args, "ClosestIntSameWeight.java",
+            .runFromAnnotations(args, "ReverseDigits.java",
                                 new Object() {}.getClass().getEnclosingClass())
             .ordinal());
   }

@@ -1,18 +1,17 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
-public class CountBits {
-  @EpiTest(testDataFile = "count_bits.tsv")
-
-  public static short countBits(int x) {
+public class IsNumberPalindromic {
+  @EpiTest(testDataFile = "is_number_palindromic.tsv")
+  public static boolean isPalindromeNumber(int x) {
     // TODO - you fill in here.
-    return 0;
+    return true;
   }
 
   public static void main(String[] args) {
     System.exit(
         GenericTest
-            .runFromAnnotations(args, "CountBits.java",
+            .runFromAnnotations(args, "IsNumberPalindromic.java",
                                 new Object() {}.getClass().getEnclosingClass())
             .ordinal());
   }

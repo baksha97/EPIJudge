@@ -1,4 +1,4 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
 import epi.test_framework.RandomSequenceChecker;

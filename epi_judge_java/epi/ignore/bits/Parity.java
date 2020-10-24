@@ -1,9 +1,9 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
-public class PrimitiveDivide {
-  @EpiTest(testDataFile = "primitive_divide.tsv")
-  public static int divide(int x, int y) {
+public class Parity {
+  @EpiTest(testDataFile = "parity.tsv")
+  public static short parity(long x) {
     // TODO - you fill in here.
     return 0;
   }
@@ -11,7 +11,7 @@ public class PrimitiveDivide {
   public static void main(String[] args) {
     System.exit(
         GenericTest
-            .runFromAnnotations(args, "PrimitiveDivide.java",
+            .runFromAnnotations(args, "Parity.java",
                                 new Object() {}.getClass().getEnclosingClass())
             .ordinal());
   }

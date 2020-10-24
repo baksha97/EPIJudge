@@ -1,9 +1,9 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
-public class Parity {
-  @EpiTest(testDataFile = "parity.tsv")
-  public static short parity(long x) {
+public class ClosestIntSameWeight {
+  @EpiTest(testDataFile = "closest_int_same_weight.tsv")
+  public static long closestIntSameBitCount(long x) {
     // TODO - you fill in here.
     return 0;
   }
@@ -11,7 +11,7 @@ public class Parity {
   public static void main(String[] args) {
     System.exit(
         GenericTest
-            .runFromAnnotations(args, "Parity.java",
+            .runFromAnnotations(args, "ClosestIntSameWeight.java",
                                 new Object() {}.getClass().getEnclosingClass())
             .ordinal());
   }

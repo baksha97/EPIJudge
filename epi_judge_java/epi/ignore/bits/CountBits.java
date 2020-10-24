@@ -1,9 +1,10 @@
-package epi;
+package epi.ignore.bits;
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;
-public class ReverseBits {
-  @EpiTest(testDataFile = "reverse_bits.tsv")
-  public static long reverseBits(long x) {
+public class CountBits {
+  @EpiTest(testDataFile = "count_bits.tsv")
+
+  public static short countBits(int x) {
     // TODO - you fill in here.
     return 0;
   }
@@ -11,7 +12,7 @@ public class ReverseBits {
   public static void main(String[] args) {
     System.exit(
         GenericTest
-            .runFromAnnotations(args, "ReverseBits.java",
+            .runFromAnnotations(args, "CountBits.java",
                                 new Object() {}.getClass().getEnclosingClass())
             .ordinal());
   }
